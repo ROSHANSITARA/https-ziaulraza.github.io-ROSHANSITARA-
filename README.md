@@ -106,3 +106,35 @@ en: [
   { id: 204, pid: 130, name: "Arshad", tags:["recent"] },
   { id: 205, pid: 130, name: "Wasim Raza", tags:["recent"] },
   { id: 206, pid: 130, name: "Nadeem Ayyub", tags:["
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Family Tree App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    #tree { width: 100vw; height: 90vh; }
+    h2 { text-align: center; margin: 16px 0 8px 0; }
+  </style>
+</head>
+<body>
+  <h2>My Family Tree</h2>
+  <div id="tree"></div>
+<script>
+  var chart = new OrgChart(document.getElementById("tree"), {
+    nodes: [
+      { id: 1, name: "आपका नाम", title: "मुख्य सदस्य" },
+      { id: 2, pid: 1, name: "पिता जी" },
+      { id: 3, pid: 1, name: "माता जी" },
+      { id: 4, pid: 2, name: "दादा जी" },
+      { id: 5, pid: 2, name: "दादी जी" },
+      { id: 6, pid: 3, name: "नाना जी" },
+      { id: 7, pid: 3, name: "नानी जी" }
+      // आप यहाँ अपने परिवार के और नाम जोड़ सकते हैं
+    ]
+  });
+</script>
+</body>
+</html>
